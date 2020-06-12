@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-if [[ $#<=1 ]]
+if (( $#<1 ))
 then
 	file=p1.sh
 else
@@ -10,6 +9,7 @@ fi
 
 if [ -f ${file} ]
 then
+	echo "file ${file} exists already!"
 	read -p "run the ${file}?[y/n]" run
 	if [[ ${run} =~ [yY]|[yY][eE][sS] ]]
 	then

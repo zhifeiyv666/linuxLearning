@@ -10,7 +10,7 @@ func_print(){
 	done
 }
 
-if [ $# > 1 ]
-then func_print >> $1
-else func_print
+if (( $#<1 ))
+then func_print
+else func_print >> $1
 fi
